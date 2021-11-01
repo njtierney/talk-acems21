@@ -1381,7 +1381,7 @@ heights %>%
 
 `r icons::icon_style(icons::fontawesome$solid$compass, fill = nipa$purple)` Explore stratification process
 
-`r icons::icon_style(icons::fontawesome$solid$code, fill = nipa$purple)` Work with `dplyr::across()` & `dplyr::pick()`
+`r icons::icon_style(icons::fontawesome$solid$code, fill = nipa$purple)` Work with `dplyr::across()`
 ]
 
 ---
