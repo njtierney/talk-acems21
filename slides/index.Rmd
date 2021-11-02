@@ -1272,51 +1272,6 @@ print(heights_five, n = 6)
 
 ---
 
-## What is the range of the data? `feat_ranges`
-
-```r
-heights %>%
-  features(height_cm, feat_ranges)
-```
-
-```{r features-feat-ranges, echo = FALSE}
-heights %>%
-  features(height_cm, feat_ranges) %>% 
-  print(n = 6)
-```
-
----
-
-## Does it only increase or decrease? `feat_monotonic`
-
-```r
-heights %>%
-  features(height_cm, feat_monotonic)
-```
-
-```{r features-feat-monotonic}
-heights %>%
-  features(height_cm, feat_monotonic) %>% 
-  print(n = 6)
-```
-
----
-
-## What is the spread of my data? `feat_spread`
-
-```r
-heights %>%
-  features(height_cm, feat_spread) 
-```
-
-```{r features-feat-spread}
-heights %>%
-  features(height_cm, feat_spread) %>% 
-  print(n = 6)
-```
-
----
-
 ## features: MANY more features in `feasts` <img src="https://feasts.tidyverts.org/reference/figures/logo.png" align="right" height=140/>
 
 .mlarge[
@@ -1328,14 +1283,6 @@ heights %>%
 [Create your own features](http://brolgar.njtierney.com/articles/finding-features.html#creating-your-own-features)
 
 ]
-
----
-
-# ~~Problem #1: How do I look at **some** of the data?~~
-
---
-
-# Problem #2: How do I find **interesting** observations?
 
 ---
 
@@ -1674,6 +1621,61 @@ ggplot(heights_near_aug,
 
 gg_heights_near
 ```  
+
+---
+
+## What is the range of the data? `feat_ranges`
+
+```r
+heights %>%
+  features(height_cm, feat_ranges)
+```
+
+```{r features-feat-ranges, echo = FALSE}
+heights %>%
+  features(height_cm, feat_ranges) %>% 
+  print(n = 6)
+```
+
+---
+
+## Does it only increase or decrease? `feat_monotonic`
+
+```r
+heights %>%
+  features(height_cm, feat_monotonic)
+```
+
+```{r features-feat-monotonic}
+heights %>%
+  features(height_cm, feat_monotonic) %>% 
+  print(n = 6)
+```
+
+---
+
+## What is the spread of my data? `feat_spread`
+
+```r
+heights %>%
+  features(height_cm, feat_spread) 
+```
+
+```{r features-feat-spread}
+heights %>%
+  features(height_cm, feat_spread) %>% 
+  print(n = 6)
+```
+
+---
+
+# ~~Problem #1: How do I look at **some** of the data?~~
+
+--
+
+# Problem #2: How do I find **interesting** observations?
+
+---
 
 ---
 

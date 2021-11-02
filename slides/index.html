@@ -1051,75 +1051,6 @@ heights %&gt;%
 
 ---
 
-## What is the range of the data? `feat_ranges`
-
-```r
-heights %&gt;%
-  features(height_cm, feat_ranges)
-```
-
-
-```
-## # A tibble: 144 × 5
-##   country       min   max range_diff   iqr
-##   &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;
-## 1 Afghanistan  161.  168.       7     3.27
-## 2 Albania      168.  170.       2.20  1.53
-## 3 Algeria      166.  171.       5.06  2.15
-## 4 Angola       159.  169.      10.5   7.87
-## 5 Argentina    167.  174.       7     2.21
-## 6 Armenia      164.  172.       8.82  5.30
-## # … with 138 more rows
-```
-
----
-
-## Does it only increase or decrease? `feat_monotonic`
-
-```r
-heights %&gt;%
-  features(height_cm, feat_monotonic)
-```
-
-
-```
-## # A tibble: 144 × 5
-##   country     increase decrease unvary monotonic
-##   &lt;chr&gt;       &lt;lgl&gt;    &lt;lgl&gt;    &lt;lgl&gt;  &lt;lgl&gt;    
-## 1 Afghanistan FALSE    FALSE    FALSE  FALSE    
-## 2 Albania     FALSE    TRUE     FALSE  TRUE     
-## 3 Algeria     FALSE    FALSE    FALSE  FALSE    
-## 4 Angola      FALSE    FALSE    FALSE  FALSE    
-## 5 Argentina   FALSE    FALSE    FALSE  FALSE    
-## 6 Armenia     FALSE    FALSE    FALSE  FALSE    
-## # … with 138 more rows
-```
-
----
-
-## What is the spread of my data? `feat_spread`
-
-```r
-heights %&gt;%
-  features(height_cm, feat_spread) 
-```
-
-
-```
-## # A tibble: 144 × 5
-##   country        var    sd   mad   iqr
-##   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-## 1 Afghanistan  7.20  2.68  1.65   3.27
-## 2 Albania      0.950 0.975 0.667  1.53
-## 3 Algeria      3.30  1.82  0.741  2.15
-## 4 Angola      16.9   4.12  3.11   7.87
-## 5 Argentina    2.89  1.70  1.36   2.21
-## 6 Armenia     10.6   3.26  3.60   5.30
-## # … with 138 more rows
-```
-
----
-
 ## features: MANY more features in `feasts` &lt;img src="https://feasts.tidyverts.org/reference/figures/logo.png" align="right" height=140/&gt;
 
 .mlarge[
@@ -1131,14 +1062,6 @@ heights %&gt;%
 [Create your own features](http://brolgar.njtierney.com/articles/finding-features.html#creating-your-own-features)
 
 ]
-
----
-
-# ~~Problem #1: How do I look at **some** of the data?~~
-
---
-
-# Problem #2: How do I find **interesting** observations?
 
 ---
 
@@ -1487,6 +1410,85 @@ keys_near(heights_aug,
 # Join data back and explore
 
 &lt;img src="figures/plot-join-aug-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## What is the range of the data? `feat_ranges`
+
+```r
+heights %&gt;%
+  features(height_cm, feat_ranges)
+```
+
+
+```
+## # A tibble: 144 × 5
+##   country       min   max range_diff   iqr
+##   &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt;
+## 1 Afghanistan  161.  168.       7     3.27
+## 2 Albania      168.  170.       2.20  1.53
+## 3 Algeria      166.  171.       5.06  2.15
+## 4 Angola       159.  169.      10.5   7.87
+## 5 Argentina    167.  174.       7     2.21
+## 6 Armenia      164.  172.       8.82  5.30
+## # … with 138 more rows
+```
+
+---
+
+## Does it only increase or decrease? `feat_monotonic`
+
+```r
+heights %&gt;%
+  features(height_cm, feat_monotonic)
+```
+
+
+```
+## # A tibble: 144 × 5
+##   country     increase decrease unvary monotonic
+##   &lt;chr&gt;       &lt;lgl&gt;    &lt;lgl&gt;    &lt;lgl&gt;  &lt;lgl&gt;    
+## 1 Afghanistan FALSE    FALSE    FALSE  FALSE    
+## 2 Albania     FALSE    TRUE     FALSE  TRUE     
+## 3 Algeria     FALSE    FALSE    FALSE  FALSE    
+## 4 Angola      FALSE    FALSE    FALSE  FALSE    
+## 5 Argentina   FALSE    FALSE    FALSE  FALSE    
+## 6 Armenia     FALSE    FALSE    FALSE  FALSE    
+## # … with 138 more rows
+```
+
+---
+
+## What is the spread of my data? `feat_spread`
+
+```r
+heights %&gt;%
+  features(height_cm, feat_spread) 
+```
+
+
+```
+## # A tibble: 144 × 5
+##   country        var    sd   mad   iqr
+##   &lt;chr&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 Afghanistan  7.20  2.68  1.65   3.27
+## 2 Albania      0.950 0.975 0.667  1.53
+## 3 Algeria      3.30  1.82  0.741  2.15
+## 4 Angola      16.9   4.12  3.11   7.87
+## 5 Argentina    2.89  1.70  1.36   2.21
+## 6 Armenia     10.6   3.26  3.60   5.30
+## # … with 138 more rows
+```
+
+---
+
+# ~~Problem #1: How do I look at **some** of the data?~~
+
+--
+
+# Problem #2: How do I find **interesting** observations?
+
+---
 
 ---
 
